@@ -1,0 +1,128 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+	box-sizing: border-box;
+}
+header{
+	width: 100;
+	height: 100px;
+	background: orange;
+	color: white;
+}
+nav{
+    width: 100;
+	height: 50px;
+	background: #B98626;	
+	border: outset;
+}
+
+footer{
+    width:100%;
+    height:40px;
+    background-color:black;
+    position: relative;
+    bottom: 0;
+    color:white;
+}
+
+article{
+	
+
+}
+/*Codigo menus*/
+.menu{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	perspective: 200px;
+}
+.menu ul{
+	display: flex;
+	margin: auto;
+
+}
+.menu li{
+list-style: none;
+padding: 15px 20px;
+}
+.menu li:hover{
+	background: rgba(0,0,0,0.3);
+	color: white;
+	cursor: pointer;
+	transition: all 300ms;
+}
+
+.menu ul li ul{
+	*display: none;
+	flex-direction: column;
+	position: absolute;
+	background: #2CE8F1;
+	margin-top: 25px;
+	transform: rotateY(240deg) scale(0);
+	transition: all 1s;
+	box-shadow: 1px 1px 10px 0px black;
+}
+
+.menu ul li:hover > ul{
+	transform: rotateY(0deg)scale(1);
+	transition: all 1s;
+}
+
+.menu ul li ul:before{
+content: '';
+width: 0;
+height: 0;
+border-right: 10px solid transparent;
+border-left: 10px solid transparent;
+border-bottom: 10px solid #2CE8F1;
+position: absolute;
+margin-top: -10px;
+margin-left: 1px;
+}
+
+.menu ul li ul li ul li{
+	position: relative;
+}
+
+.menu ul li ul li ul{
+	right: -75px;
+	top: 50px;
+	background: #58b813;
+}
+.menu ul li ul li ul:before{
+position: absolute;
+border-bottom: 8px solid #58b813;
+margin-top: 5px;
+margin-left: -14px;
+transform: rotate(-90deg);
+
+}
+
+/*Codigo Redes sociales*/
+.social{
+	position: fixed;
+	left:0;
+	top: 200px;
+	z-index: 2000;
+}
+.social ul li a{
+	display: inline-block;
+	color: #fff;
+	background: #000;
+	padding: 10px 15px;
+	text-decoration: none;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+    transition: all 500ms ease;
+}/* Establecemos los colores de cada red social */
+.social ul li .icon-facebook {background:#3b5998;} 
+.social ul li .icon-twitter {background: #00abf0;}
+.social ul li .icon-googleplus {background: #d95232;}
+.social ul li .icon-pinterest {background: #ae181f;}
+.social ul li .icon-mail {background: #666666;}
+ 
+.social ul li a:hover {
+	background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+	padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+}
